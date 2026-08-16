@@ -1,86 +1,301 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TradingXperienceCrypto</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TradingXperienceCrypto</title>
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-    body {
-      font-family: Arial, sans-serif;
-      background: #0b1220;
-      color: #ffffff;
-      line-height: 1.6;
-    }
+body {
+  font-family: Arial, sans-serif;
+  background: #0b1220;
+  color: #ffffff;
+  line-height: 1.6;
+}
 
-    header {
-      background: #111827;
-      padding: 20px;
-      border-bottom: 1px solid #263247;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
+header {
+  background: #111827;
+  padding: 18px 20px;
+  border-bottom: 1px solid #263247;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
 
-    .nav {
-      max-width: 1100px;
-      margin: auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+.nav {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-    .logo {
-      font-size: 22px;
-      font-weight: bold;
-      color: #38bdf8;
-    }
+.logo {
+  font-size: 21px;
+  font-weight: bold;
+  color: #38bdf8;
+}
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin-left: 18px;
-      font-size: 14px;
-    }
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  margin-left: 18px;
+}
 
-    nav a:hover {
-      color: #38bdf8;
-    }
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #0b1220, #172554);
+}
 
-    .hero {
-      max-width: 1100px;
-      margin: auto;
-      padding: 80px 20px;
-      text-align: center;
-    }
+.hero h1 {
+  font-size: 44px;
+  margin-bottom: 15px;
+}
 
-    .hero h1 {
-      font-size: 48px;
-      margin-bottom: 15px;
-    }
+.hero h1 span {
+  color: #38bdf8;
+}
 
-    .hero h1 span {
-      color: #38bdf8;
-    }
+.hero p {
+  color: #aab5c7;
+  max-width: 700px;
+  margin: auto;
+  font-size: 18px;
+}
 
-    .hero p {
-      color: #aab5c7;
-      max-width: 650px;
-      margin: auto;
-      font-size: 18px;
-    }
+.btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 13px 22px;
+  background: #2563eb;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+}
 
-    .buttons {
-      margin-top: 30px;
-    }
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 55px 20px;
+}
 
-    .btn {
-      display: inline-block;
-      padding: 13px 22px;
-      border
+.section-title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #111827;
+  border: 1px solid #263247;
+  border-radius: 12px;
+  padding: 25px;
+}
+
+.card h3 {
+  color: #38bdf8;
+  margin-bottom: 10px;
+}
+
+.market {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111827;
+  border: 1px solid #263247;
+  padding: 20px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+}
+
+.price {
+  color: #22c55e;
+  font-weight: bold;
+}
+
+.warning {
+  background: #1e293b;
+  border-left: 4px solid #f59e0b;
+  padding: 20px;
+  margin-top: 30px;
+  color: #dbeafe;
+}
+
+footer {
+  text-align: center;
+  padding: 30px 20px;
+  background: #070d18;
+  color: #94a3b8;
+  margin-top: 30px;
+}
+
+@media (max-width: 700px) {
+  .nav {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  nav a {
+    margin: 0 7px;
+  }
+
+  .hero h1 {
+    font-size: 34px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="nav">
+    <div class="logo">TradingXperienceCrypto</div>
+
+    <nav>
+      <a href="#learn">Learn</a>
+      <a href="#markets">Markets</a>
+      <a href="#demo">Demo</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <h1>Learn <span>Bitcoin & Forex</span> Trading</h1>
+
+  <p>
+    Explore cryptocurrency and forex concepts, technical analysis,
+    market terminology and risk management through an educational
+    simulated trading environment.
+  </p>
+
+  <a href="#learn" class="btn">Start Learning</a>
+</section>
+
+<section id="learn" class="container">
+
+  <div class="section-title">
+    <h2>Learning Center</h2>
+    <p>Build your understanding step by step.</p>
+  </div>
+
+  <div class="cards">
+
+    <div class="card">
+      <h3>Bitcoin Basics</h3>
+      <p>
+        Learn what Bitcoin is, how blockchain technology works,
+        and how cryptocurrency markets are structured.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Forex Fundamentals</h3>
+      <p>
+        Understand currency pairs, pips, spreads, charts and
+        important forex terminology.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Technical Analysis</h3>
+      <p>
+        Study charts, trends, support, resistance and common
+        technical-analysis concepts.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Risk Management</h3>
+      <p>
+        Learn why position sizing, planning and risk management
+        are important when studying markets.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<section id="markets" class="container">
+
+  <div class="section-title">
+    <h2>Market Dashboard</h2>
+    <p>Example market data for educational purposes.</p>
+  </div>
+
+  <div class="market">
+    <span>BTC / USD</span>
+    <span class="price">Demo Market</span>
+  </div>
+
+  <div class="market">
+    <span>EUR / USD</span>
+    <span class="price">Demo Market</span>
+  </div>
+
+  <div class="market">
+    <span>XAU / USD</span>
+    <span class="price">Demo Market</span>
+  </div>
+
+</section>
+
+<section id="demo" class="container">
+
+  <div class="section-title">
+    <h2>Simulated Trading</h2>
+    <p>Practice trading concepts without using real money.</p>
+  </div>
+
+  <div class="card">
+    <h3>Demo Trading Terminal</h3>
+
+    <p>
+      This educational demo can be used to understand hypothetical
+      buy and sell decisions. No real funds, deposits or withdrawals
+      are supported.
+    </p>
+
+    <button class="btn" onclick="demoTrade()">
+      Try Demo Trade
+    </button>
+
+    <p id="result" style="margin-top:20px;"></p>
+  </div>
+
+  <div class="warning">
+    <strong>Educational Notice:</strong><br>
+    TradingXperienceCrypto is an educational project.
+    This website does not accept real-money deposits or provide
+    investment guarantees. Market trading involves significant risk.
+  </div>
+
+</section>
+
+<footer>
+  <p>© 2026 TradingXperienceCrypto</p>
+  <p>Bitcoin & Forex Education • Simulated Trading</p>
+</footer>
+
+<script>
+function demoTrade() {
+  document.getElementById("result").innerHTML =
+    "Demo trade recorded. This is a simulated result only — no real money is involved.";
+}
+</script>
+
+</body>
+</html>  
